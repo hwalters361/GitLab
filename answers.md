@@ -4,6 +4,13 @@ This is only a "quiz" in the loosest sense that it's asking questions whose
 answers will be part of your grade. Please use *any resources you want*, as
 long as you list those resources (e.g. peers, websites, etc.)
 
+# Resources Used
+I used this stack overflow post to understand how to checkout a remote branch locally:
+https://stackoverflow.com/questions/1783405/how-do-i-check-out-a-remote-git-branch
+
+I used this stack overflow post to understand how to make a .gitignore file:
+https://github.com/DomBennett/Teaching-github/tree/master
+
 ## Navigating logs
 
 1. What is the SHA for the last commit made by Prof. Xanda on the branch
