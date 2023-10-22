@@ -53,6 +53,9 @@ What branches would change, and how?
 git checkout test
 git merge top_N
 ```
+I think that it would merge successfully. top_N's commits would be merged into test, and the process_movie_dataset would be updated with the data in top_N.
+
+Since the top_N branch was created based on the test branch, there shouldn't be any conflicts. Git should perform a fast-forward merge, which means it would simply move the test branch pointer to the same commit as the top_N branch. The branches would change by pointing to the same commit, and there would be no merge commit created.
 
 6. What do you think would happen if you ran the following commands?
 What branches would change, and how?
@@ -60,6 +63,9 @@ What branches would change, and how?
 git checkout top_ten
 git merge test
 ```
+I think we would get a merge conflict because the content of process_movie_data.py is different in top_ten than in top_N. We would get a merge conflict error. 
+
+Since both branches have different changes (the top_ten branch has modifications for the top ten movies, and the test branch has changes for questions and answers), there is a potential for merge conflicts. If Git cannot automatically resolve these conflicts, it will require manual intervention to resolve them. 
 
 7. What do you think would happen if you ran the following commands?
 What branches would change, and how?
@@ -68,3 +74,6 @@ git checkout test
 git rebase top_ten
 git rebase top_N
 ```
+
+We will not get an error.
+Since top_ten was based on test, and top_N was also based on test, the rebase operation should proceed smoothly without conflicts. The test branch would be updated to include the changes from both top_ten and top_N branches, and there would be no merge conflicts.
